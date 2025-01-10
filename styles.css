@@ -231,7 +231,15 @@ header nav ul li a:hover {
 .project:hover {
     transform: scale(1.05);
 }
+#location {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
 
+#location .map iframe {
+    border-radius: 10px;
+}
 /* Contact Section */
 #contact {
     padding: 60px 0;
@@ -298,4 +306,81 @@ footer {
 
 footer p {
     margin: 0;
+}
+/* Responsivo para teléfonos y tabletas */
+@media (max-width: 1024px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo img {
+        height: 40px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #services .services-grid,
+    #projects .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        height: auto;
+        padding: 20px;
+    }
+
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #logosi .social-icons {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        height: 30px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
