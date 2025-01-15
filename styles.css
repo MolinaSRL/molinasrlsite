@@ -52,6 +52,28 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #db6606;
 }
+#audio-section {
+    text-align: center;
+    padding: 40px 0;
+    background: #05463d;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-width: 15px;
+}
+
+#audio-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fffafa;
+}
+
+#audio-section audio {
+    width: 90%;
+    max-width: 600px;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 /* Hero Section */
 #hero {
     background: url('ayeyeye.png') no-repeat center center/cover;
