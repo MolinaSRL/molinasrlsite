@@ -163,7 +163,30 @@ header nav ul li a:hover {
 #logosi .social-icons a:hover {
     color: #bdec66;
 }
+/* Sección Nuestra Página en Canvas */
+#canvas-page {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
 
+#canvas-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#canvas-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#canvas-page iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+}
 /* Services Section */
 #services {
     padding: 60px 0;
@@ -304,7 +327,93 @@ header nav ul li a:hover {
     width: 100%;
     max-width: 400px;
 }
+.clientes-satisfechos {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
 
+.clientes-satisfechos h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cliente {
+    border-top: 1px solid #eaeaea;
+    margin: 20px 0;
+    padding-top: 20px;
+}
+
+.cliente img {
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cliente p {
+    color: #000000;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.cliente:first-child {
+    border-top: none;
+}
+/* Sección Bienes Raíces y Servicios MolinaSRL */
+#certificates {
+    padding: 60px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+#certificates .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#certificates h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#certificates p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.certificate {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.certificate img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.certificate p {
+    font-size: 1rem;
+    color: #555;
+}
 /* Galería de Imágenes y Videos */
 #media-galeria {
     padding: 60px 0;
