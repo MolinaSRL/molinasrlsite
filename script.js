@@ -72,7 +72,7 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     const mensajeCodificado = encodeURIComponent(mensaje);
 
     // Reemplaza '591XXXXXXXXX' con el número de WhatsApp al que deseas enviar el mensaje
-    const numeroWhatsApp = "59170990333"; // Cambia este número
+    const numeroWhatsApp = "59169270000"; // Cambia este número
     const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
 
     // Abrir el enlace en una nueva pestaña
