@@ -54,19 +54,18 @@ document.getElementById("contactForm").addEventListener("submit", function (even
 
     // Capturar los valores de los campos del formulario
     const nombre = document.getElementById("nombre").value.trim();
-    const apellido = document.getElementById("apellido").value.trim();
     const ciudad = document.getElementById("ciudad").value.trim();
     const lote = document.getElementById("lote").value.trim();
     const celular = document.getElementById("celular").value.trim();
 
     // Validación para asegurarse de que no haya campos vacíos
-    if (!nombre || !apellido || !ciudad || !lote || !celular) {
+    if (!nombre || !ciudad || !lote || !celular) {
         alert("Por favor, completa todos los campos antes de enviar.");
         return;
     }
 
     // Construir el mensaje que se enviará por WhatsApp
-    const mensaje = `Hola, soy ${nombre} ${apellido}. Estoy interesado/a en el lote "${lote}" y vivo en ${ciudad}. Mi número de contacto es ${celular}.`;
+    const mensaje = `Hola, soy ${nombre}. Mi correo es "${lote}" y vivo en ${ciudad}. Mi número de contacto es ${celular}.`;
 
     // Codificar el mensaje para que sea válido en una URL
     const mensajeCodificado = encodeURIComponent(mensaje);
