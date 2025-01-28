@@ -49,3 +49,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadGoogleMapsScript();
 });
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Detiene el comportamiento por defecto del formulario
+
+    // Capturar los valores de los campos del formulario
+    const nombre = document.getElementById("nombre").value.trim();
+    const apellido = document.getElementById("apellido").value.trim();
+    const ciudad = document.getElementById("ciudad").value.trim();
+    const lote = document.getElementById("lote").value.trim();
+    const celular = document.getElementById("celular").value.trim();
+
+    // Validación para asegurarse de que no haya campos vacíos
+    if (!nombre || !apellido || !ciudad || !lote || !celular) {
+        alert("Por favor, completa todos los campos antes de enviar.");
+        return;
+    }
+
+    // Construir el mensaje que se enviará por WhatsApp
+    const mensaje = `Hola, soy ${nombre} ${apellido}. Estoy interesado/a en el lote "${lote}" y vivo en ${ciudad}. Mi número de contacto es ${celular}.`;
+
+    // Codificar el mensaje para que sea válido en una URL
+    const mensajeCodificado = encodeURIComponent(mensaje);
+
+    // Reemplaza '591XXXXXXXXX' con el número de WhatsApp al que deseas enviar el mensaje
+    const numeroWhatsApp = "59170990333"; // Cambia este número
+    const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+    // Abrir el enlace en una nueva pestaña
+    window.open(whatsappURL, "_blank");
+    if (isMobile) {
+        // Redirigir directamente a la app de WhatsApp en móviles
+        const whatsappURL = `whatsapp://send?phone=${numeroWhatsapp}&text=${encodeURIComponent(mensaje)}`;
+        window.location.href = whatsappURL;
+    } else {
+        // Usar el enlace web en caso de que no sea móvil
+        const webURL = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensaje)}`;
+        window.open(webURL, "_blank");
+    }
+});
