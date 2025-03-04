@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Google Maps API
-    const initMap = () => {
+    const initMap = () => { 
         const mapElement = document.getElementById('map');
         if (mapElement) {
             const map = new google.maps.Map(mapElement, {
@@ -86,3 +86,14 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         window.open(webURL, "_blank");
     }
 });
+function initMap() {
+    var terreno = { lat: -17.7833, lng: -63.1821 }; // Reemplaza con las coordenadas de tu terreno
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: terreno
+    });
+    var marker = new google.maps.Marker({ position: terreno, map: map });
+}
+
+
+
