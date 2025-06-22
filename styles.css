@@ -183,7 +183,6 @@ header nav ul li a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* Para compatibilidad */
-  text-fill-color: transparent;
 }
 #logosi .social-icons a:hover {
     color: #bdec66;
@@ -605,4 +604,63 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+}
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .logros-content {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .cliente img,
+    .certificate img,
+    .project img,
+    .service img,
+    .media-grid .ima,
+    .logros-imagen img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .certificates-grid,
+    .media-grid,
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #logosi .social-iconsf a,
+    #logosi .social-iconsyt a,
+    #logosi .social-iconswa a,
+    #logosi .social-iconsg a,
+    #logosi .social-iconsig a {
+        font-size: 48px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .form-group {
+        text-align: left;
+    }
 }
