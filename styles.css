@@ -76,7 +76,7 @@ header nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-    background: url('ayeyeye.png') no-repeat center center/cover;
+    background: url('fondo.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -152,14 +152,39 @@ header nav ul li a:hover {
     align-items: center;
     gap: 60px;
 }
-
-#logosi .social-icons a {
+#logosi .social-iconsf a {
     font-size: 70px;
-    color: rgb(0, 0, 0);
+    color: rgb(3, 28, 255);
     text-decoration: none;
     transition: color 0.3s;
 }
-
+#logosi .social-iconsyt a {
+    font-size: 70px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#logosi .social-iconswa a {
+    font-size: 70px;
+    color: rgb(0, 255, 64);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#logosi .social-iconsg a {
+    font-size: 70px;
+    color: rgb(255, 3, 3);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#logosi .social-iconsig a {
+    font-size: 70px;
+   /* Ajusta el tamaño si lo necesitas */
+  background: linear-gradient(90deg, #e5ff00, #ff0505, #ff00aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Para compatibilidad */
+  text-fill-color: transparent;
+}
 #logosi .social-icons a:hover {
     color: #bdec66;
 }
@@ -439,8 +464,7 @@ header nav ul li a:hover {
     justify-content: center; /* Centra la cuadrícula */
 }
 
-.media-grid img,
-.media-grid video {
+.media-grid .ima {
     width: 100%;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
