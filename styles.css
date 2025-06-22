@@ -737,9 +737,7 @@ button {
     #canvas-page iframe,
     #location .map iframe,
     #pano,
-    #cesiumContainer,
-    .cesium-viewer,
-    .cesium-widget {
+    #cesium {
         width: 100vw !important;
         min-width: 0 !important;
         height: 220px !important;
