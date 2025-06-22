@@ -608,146 +608,148 @@ button {
 }
 /* ...existing code... */
 
+/* ...existing code... */
+
 @media (max-width: 768px) {
-    /* Header */
-    header {
-        position: static;
-        height: auto;
-        min-height: unset;
-    }
-    header .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0 5px;
-    }
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0;
-    }
-    header .logo img {
-        height: 40px;
-        width: auto;
-    }
+  /* General */
+  html, body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 100vw;
+    padding: 0 5px;
+  }
+  h1, h2, h3, p {
+    word-break: break-word;
+  }
 
-    /* Hero Section */
-    #hero {
-        padding: 40px 5px;
-        flex-direction: column;
-        height: auto;
-        min-height: 60vh;
-    }
-    #hero h1 {
-        font-size: 1.5rem;
-    }
-    #hero p {
-        font-size: 1rem;
-    }
-    #hero .btn {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
+  /* Header */
+  header {
+    position: static;
+    flex-direction: column;
+    height: auto;
+    min-height: unset;
+  }
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 5px;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+  header .logo img {
+    height: 40px;
+    width: auto;
+  }
 
-    /* Secciones generales */
-    .container {
-        max-width: 100vw;
-        padding: 0 5px;
-    }
+  /* Hero Section */
+  #hero {
+    padding: 40px 5px;
+    flex-direction: column;
+    height: auto;
+    min-height: 60vh;
+  }
+  #hero h1 {
+    font-size: 1.5rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+  #hero .btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
 
-    /* Grids adaptables */
-    .services-grid,
-    .projects-grid,
-    .certificates-grid,
-    .media-grid,
-    .locations-grid {
-        grid-template-columns: 1fr !important;
-        gap: 10px;
-    }
+  /* Redes sociales (logos) */
+  #logosi .social-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  #logosi .social-icons > div {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  #logosi .social-icons a {
+    font-size: 40px !important;
+  }
 
-    /* LOGOS redes sociales */
-    #logosi .social-icons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    #logosi .social-icons > div {
-        flex: 1 1 40%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    #logosi .social-icons a {
-        font-size: 40px !important;
-    }
+  /* Grids adaptables */
+  .services-grid,
+  .projects-grid,
+  .certificates-grid,
+  .media-grid,
+  .locations-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
 
-    /* Imágenes y videos responsivos */
-    .cliente img,
-    .certificate img,
-    .project img,
-    .service img,
-    .media-grid .ima,
-    .logros-imagen img {
-        width: 100% !important;
-        height: auto !important;
-        max-width: 100% !important;
-        max-height: 200px !important;
-        object-fit: contain;
-    }
-    .media-grid img,
-    .media-grid video {
-        width: 100% !important;
-        height: auto !important;
-        max-width: 100vw !important;
-        max-height: 200px !important;
-        object-fit: contain;
-        display: block;
-        margin: 0 auto;
-    }
+  /* Imágenes y videos responsivos */
+  img, video, iframe {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100vw !important;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+  .cliente img,
+  .certificate img,
+  .project img,
+  .service img,
+  .logros-imagen img {
+    max-height: 180px !important;
+    object-fit: contain;
+  }
 
-    /* Cliente imagen tamaño */
-    .cliente img {
-        height: auto !important;
-        max-height: 150px !important;
-        width: 100% !important;
-    }
+  /* Iframes específicos (Facebook, Cesium, Maps, Canva, etc.) */
+  iframe,
+  #canvas-page iframe,
+  #location .map iframe,
+  #pano,
+  .cesium iframe {
+    width: 100vw !important;
+    min-width: 0 !important;
+    height: 220px !important;
+    max-width: 100vw !important;
+    max-height: 220px !important;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
 
-    /* Formularios */
-    form {
-        padding: 10px;
-        width: 100%;
-        min-width: 0;
-    }
-    .form-group {
-        text-align: left;
-    }
+  /* Secciones con texto e imagen */
+  .logros-content {
+    flex-direction: column;
+    padding: 0 5px;
+  }
+  .logros-texto {
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
 
-    /* Secciones con texto e imagen */
-    .logros-content {
-        flex-direction: column;
-        padding: 0 5px;
-    }
-    .logros-texto {
-        padding-right: 0;
-        padding-bottom: 10px;
-    }
+  /* Formularios */
+  form {
+    padding: 10px;
+    width: 100%;
+    min-width: 0;
+  }
+  .form-group {
+    text-align: left;
+  }
 
-    /* Iframes responsivos (incluye Cesium) */
-    iframe,
-    #canvas-page iframe,
-    #location .map iframe,
-    #pano,
-    #cesium {
-        width: 100vw !important;
-        min-width: 0 !important;
-        height: 220px !important;
-        max-width: 100vw !important;
-        max-height: 220px !important;
-        border-radius: 8px;
-        display: block;
-        margin: 0 auto;
-    }
-    /* Si usas un div para Cesium, asegúrate de que tenga estas clases o IDs */
+  /* Footer */
+  footer .container {
+    padding: 0 5px;
+  }
 }
 
 /* ...existing code... */
