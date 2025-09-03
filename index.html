@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Molina SRL — Lotes en San Miguel 3 y 4 | Santa Cruz</title>
-  <meta name="description" content="Lotes desde Bs 49,000 en San Miguel 3 y 4, zona este de Santa Cruz, a 5 minutos de la Av. Virgen de Cotoca (Fridosa). Compra segura con Molina SRL." />
+  <meta name="description" content="Lotes desde Bs 49,000 en San Miguel 3 y 4, zona este de Santa Cruz, a 5 minutos de la Av. Virgen de Cotoca (Fridosa). Papeles al día, compra segura con Molina SRL." />
   <meta name="theme-color" content="#1C7C54" />
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Molina SRL — Lotes en San Miguel 3 y 4" />
-  <meta property="og:description" content="Lotes desde Bs 49,000. A 5 minutos de la Av. Virgen de Cotoca (Fridosa). Compra segura y asesoría completa." />
+  <meta property="og:description" content="Lotes desde Bs 49,000. A 5 minutos de la Av. Virgen de Cotoca (Fridosa). Papeles al día, compra segura y asesoría completa." />
   <meta property="og:image" content="assets/og.jpg" />
   <meta property="og:url" content="https://molinasrl.github.io/molinasrlsite/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,12 +27,7 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              green: '#1C7C54', // principal
-              orange: '#FF7A00',
-              fuchsia: '#E91E63',
-              gray: '#1F2937'
-            }
+            brand: { green: '#1C7C54', orange: '#FF7A00', fuchsia: '#E91E63', gray: '#1F2937' }
           },
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
           boxShadow: { soft: '0 10px 30px rgba(0,0,0,.08)' }
@@ -43,9 +38,10 @@
   <style>
     html { scroll-behavior: smooth; }
     .glass { backdrop-filter: blur(6px); background: rgba(255,255,255,.7); }
+    .badge { @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold; }
   </style>
 
-  <!-- Schema.org (mejora SEO local) -->
+  <!-- Schema.org (mejora SEO local + ofertas) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,29 +52,33 @@
     "email": "mailto:foronda.pablo@gmail.com",
     "telephone": "+591 69270000",
     "areaServed": "Santa Cruz de la Sierra, Bolivia",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santa Cruz de la Sierra",
-      "addressCountry": "BO"
-    },
-    "sameAs": [
-      "https://www.instagram.com/bienesraicesmolinasrl"
-    ]
+    "address": {"@type": "PostalAddress", "addressLocality": "Santa Cruz de la Sierra", "addressCountry": "BO"},
+    "sameAs": ["https://www.instagram.com/bienesraicesmolinasrl"],
+    "makesOffer": [{
+      "@type": "Offer",
+      "price": "49000",
+      "priceCurrency": "BOB",
+      "description": "Lote de 250 m² en San Miguel 3/4. Papeles al día.",
+      "availability": "https://schema.org/InStock"
+    }]
   }
   </script>
 </head>
 
 <body class="font-sans text-slate-800 bg-white">
+  <!-- Sticky CTA -->
+  <a href="#contacto" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-brand-green text-white px-5 py-3 rounded-full shadow-soft hover:opacity-95">👉 Quiero cotizar ahora</a>
+
   <!-- Top Bar -->
   <div class="bg-brand-green text-white text-sm">
     <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
-      <p class="opacity-90">Lotes desde <strong>Bs 49,000</strong> · Zona Este · A 5 min de la Av. Virgen de Cotoca (Fridosa)</p>
-      <a href="#contacto" class="underline decoration-white/50 underline-offset-2 hover:opacity-90">Asesoría legal y financiamiento</a>
+      <p class="opacity-90">Lotes desde <strong>Bs 49,000</strong> · Zona Este · A 5 min de la Av. Virgen de Cotoca (Fridosa) · <strong>Papeles al día</strong></p>
+      <a href="#docs" class="underline decoration-white/50 underline-offset-2 hover:opacity-90">Ver documentos en regla</a>
     </div>
   </div>
 
   <!-- Header / Nav -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#inicio" class="flex items-center gap-3">
         <img src="logomol.jpg" alt="Logo Molina SRL" class="w-9 h-9 object-contain" />
@@ -87,15 +87,15 @@
       <nav class="hidden md:flex items-center gap-6">
         <a href="#proyectos" class="hover:text-brand-green">Proyectos</a>
         <a href="#ofertas" class="hover:text-brand-green">Ofertas</a>
+        <a href="#diferenciales" class="hover:text-brand-green">¿Por qué nosotros?</a>
+        <a href="#proceso" class="hover:text-brand-green">Cómo comprar</a>
+        <a href="#docs" class="hover:text-brand-green">Papeles al día</a>
         <a href="#ubicacion" class="hover:text-brand-green">Ubicación</a>
-        <a href="#testimonios" class="hover:text-brand-green">Testimonios</a>
+        <a href="#faq" class="hover:text-brand-green">Preguntas</a>
         <a href="#contacto" class="hover:text-brand-green">Contacto</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a id="ctaWhatsHeader" href="https://wa.me/59169270000?text=Quiero%20cotizar%20un%20lote%20en%20San%20Miguel" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brand-green text-white px-4 py-2 rounded-xl shadow-soft hover:opacity-95">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163A10.905 10.905 0 0111.89.045c5.926 0 10.755 4.83 10.755 10.758 0 5.926-4.829 10.755-10.755 10.755a10.9 10.9 0 01-5.196-1.318L.057 24zM6.6 19.2c1.676.995 3.285 1.591 5.29 1.591 4.504 0 8.168-3.664 8.168-8.168 0-4.506-3.664-8.17-8.168-8.17-4.506 0-8.17 3.664-8.17 8.17 0 2.037.782 3.923 2.092 5.357l-.536 1.956 1.324-.736z"/><path d="M16.67 13.59c-.09-.15-.33-.24-.69-.42-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18s-.93 1.17-1.14 1.41c-.21.24-.42.27-.78.09-.36-.18-1.53-.56-2.92-1.79-1.08-.96-1.81-2.15-2.02-2.51-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.3-.72-.6-.6-.81-.6h-.69c-.21 0-.54.09-.81.42-.27.33-1.05 1.02-1.05 2.49s1.08 2.88 1.23 3.09c.15.21 2.13 3.24 5.16 4.55.72.3 1.29.48 1.73.62.73.24 1.38.21 1.89.12.57-.09 1.74-.72 1.98-1.41.24-.69.24-1.29.15-1.41z"/></svg>
-          <span>Cotizar por WhatsApp</span>
-        </a>
+        <a href="https://wa.me/59169270000?text=Quiero%20cotizar%20un%20lote%20en%20San%20Miguel" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brand-green text-white px-4 py-2 rounded-xl shadow-soft hover:opacity-95">Cotizar por WhatsApp</a>
         <button id="menuBtn" class="md:hidden inline-flex items-center p-2 rounded-lg border border-slate-200" aria-label="Abrir menú">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
@@ -104,26 +104,33 @@
     <nav id="mobileNav" class="md:hidden hidden border-t border-slate-200 px-4 pb-3">
       <a href="#proyectos" class="block py-2">Proyectos</a>
       <a href="#ofertas" class="block py-2">Ofertas</a>
+      <a href="#diferenciales" class="block py-2">¿Por qué nosotros?</a>
+      <a href="#proceso" class="block py-2">Cómo comprar</a>
+      <a href="#docs" class="block py-2">Papeles al día</a>
       <a href="#ubicacion" class="block py-2">Ubicación</a>
-      <a href="#testimonios" class="block py-2">Testimonios</a>
+      <a href="#faq" class="block py-2">Preguntas</a>
       <a href="#contacto" class="block py-2">Contacto</a>
     </nav>
   </header>
 
   <!-- Hero -->
   <section id="inicio" class="relative">
-    <img src="familiafeliz.jpg" alt="Familia viendo su lote en San Miguel" class="w-full h-[58vh] md:h-[70vh] object-cover" />
+    <img src="fondo.jpg" alt="Familia viendo su lote en San Miguel" class="w-full h-[58vh] md:h-[72vh] object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
     <div class="absolute inset-0 flex items-end md:items-center">
       <div class="max-w-7xl mx-auto px-4 pb-8 md:pb-0">
-        <div class="glass rounded-2xl p-5 md:p-8 max-w-2xl shadow-soft">
-          <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">Lotes en San Miguel 3 y 4</h1>
-          <p class="mt-2 text-slate-700">Desde <span class="font-bold">Bs 49,000</span> · 250–292 m² · Zona Este · <span class="font-semibold">a 5 min de la Av. Virgen de Cotoca (Fridosa)</span>.</p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <a id="ctaWhatsHero" href="https://wa.me/59169270000?text=Hola%20Molina%20SRL,%20quiero%20informaci%C3%B3n%20de%20lotes%20en%20San%20Miguel" target="_blank" class="inline-flex items-center gap-2 bg-brand-green text-white px-5 py-3 rounded-xl shadow-soft hover:opacity-95">
-              <span>Hablar por WhatsApp</span>
-            </a>
-            <a href="#ubicacion" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Ver ubicación</a>
+        <div class="glass rounded-2xl p-5 md:p-8 max-w-3xl shadow-soft">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="badge bg-white/90 text-brand-green border border-brand-green">Papeles al día</span>
+            <span class="badge bg-white/90 text-brand-green border border-brand-green">Ubicación estratégica</span>
+            <span class="badge bg-white/90 text-brand-green border border-brand-green">Crédito directo</span>
+          </div>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">Lotes en San Miguel 3 y 4 — desde Bs 49,000</h1>
+          <p class="mt-3 text-slate-700 text-lg">250–292 m² · Zona Este · <span class="font-semibold">a 5 min de la Av. Virgen de Cotoca (Fridosa)</span>. Asesoría legal completa y acompañamiento hasta la entrega.</p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://wa.me/59169270000?text=Hola%20Molina%20SRL,%20quiero%20informaci%C3%B3n%20de%20lotes%20en%20San%20Miguel" target="_blank" class="inline-flex items-center gap-2 bg-brand-green text-white px-5 py-3 rounded-xl shadow-soft hover:opacity-95">Hablar por WhatsApp</a>
+            <a href="#ofertas" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Ver ofertas</a>
+            <a href="#docs" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Ver papeles en regla</a>
           </div>
         </div>
       </div>
@@ -131,14 +138,14 @@
   </section>
 
   <!-- Proyectos -->
-  <section id="proyectos" class="py-14">
+  <section id="proyectos" class="py-16">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex items-end justify-between flex-wrap gap-4 mb-8">
         <h2 class="text-2xl md:text-3xl font-extrabold">Proyectos</h2>
-        <p class="text-slate-600 max-w-2xl">Urbanizaciones con servicios, acceso y ubicación estratégica para tu familia: <strong>San Miguel 3</strong> y <strong>San Miguel 4</strong>.</p>
+        <p class="text-slate-600 max-w-2xl">Urbanizaciones con servicios, acceso y ubicación estratégica para tu familia: <strong>San Miguel 3</strong> y <strong>San Miguel 4</strong>. Todas nuestras propiedades cuentan con <span class="font-semibold text-brand-green">papeles al día</span> y respaldo legal.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-6">
-        <!-- Card SM3 -->
+        <!-- SM3 -->
         <article class="border rounded-2xl overflow-hidden shadow-soft">
           <img src="kkkoool.png" alt="Urbanización San Miguel 3" class="w-full h-56 object-cover" loading="lazy" />
           <div class="p-6">
@@ -155,7 +162,7 @@
             </div>
           </div>
         </article>
-        <!-- Card SM4 -->
+        <!-- SM4 -->
         <article class="border rounded-2xl overflow-hidden shadow-soft">
           <img src="sanmiguel4.jpg" alt="Urbanización San Miguel 4" class="w-full h-56 object-cover" loading="lazy" />
           <div class="p-6">
@@ -176,161 +183,138 @@
     </div>
   </section>
 
+  <!-- Diferenciales -->
+  <section id="diferenciales" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">¿Por qué elegir Molina SRL?</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <div class="bg-white border rounded-2xl p-6 shadow-soft">
+          <h3 class="font-bold">Seguridad jurídica</h3>
+          <p class="mt-2 text-slate-600">Propiedades con <strong>papeles al día</strong>, verificación catastral y asesoría notarial.</p>
+        </div>
+        <div class="bg-white border rounded-2xl p-6 shadow-soft">
+          <h3 class="font-bold">Ubicación real</h3>
+          <p class="mt-2 text-slate-600">A 5 min de la Av. Virgen de Cotoca (Fridosa) y cerca de colegios y mercados.</p>
+        </div>
+        <div class="bg-white border rounded-2xl p-6 shadow-soft">
+          <h3 class="font-bold">Crédito directo</h3>
+          <p class="mt-2 text-slate-600">Planes flexibles hasta 5 años, inicial baja y cuotas claras.</p>
+        </div>
+        <div class="bg-white border rounded-2xl p-6 shadow-soft">
+          <h3 class="font-bold">Acompañamiento total</h3>
+          <p class="mt-2 text-slate-600">Desde la visita al lote hasta la firma; te guiamos en cada paso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Ofertas -->
-  <section id="ofertas" class="py-14 bg-slate-50">
+  <section id="ofertas" class="py-16">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-extrabold">Ofertas de lotes</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <!-- 250 m2 -->
+      <p class="mt-2 text-slate-600">Precios de referencia, confirma stock y ubicación exacta por WhatsApp.</p>
+      <div class="mt-6 grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+        <!-- 250 m2 contado -->
         <article class="bg-white border rounded-2xl p-6 shadow-soft">
-          <h3 class="text-xl font-bold">Lote de 250 m²</h3>
-          <p class="text-slate-600">Crédito directo 5 años sin intereses</p>
+          <h3 class="text-xl font-bold">Lote 250 m² — CONTADO</h3>
           <ul class="mt-3 text-sm space-y-1">
-            <li>Precio especial: <strong>Bs 78.412,50</strong></li>
-            <li>Inicial: <strong>Bs 7.000</strong></li>
-            <li>Cuota mensual: <strong>Bs 1.190</strong></li>
-            <li class="text-brand-green font-semibold">¡Promo! Paga 3 cuotas, 1 de regalo</li>
-            <li>Precio al CONTADO: <strong>Bs 49.000</strong></li>
+            <li>Precio: <strong>Bs 49.000</strong></li>
+            <li>Entrega inmediata · Papeles al día</li>
           </ul>
-          <a target="_blank" href="https://wa.me/59169270000?text=Quiero%20el%20lote%20de%20250m2" class="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-green text-white hover:opacity-95">Cotizar por WhatsApp</a>
+          <a target="_blank" href="https://wa.me/59169270000?text=Quiero%20el%20lote%20de%20250m2%20CONTADO" class="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-green text-white hover:opacity-95">Cotizar por WhatsApp</a>
         </article>
-        <!-- 292 m2 -->
+        <!-- 250 m2 crédito -->
         <article class="bg-white border rounded-2xl p-6 shadow-soft">
-          <h3 class="text-xl font-bold">Lote de 292 m²</h3>
-          <p class="text-slate-600">Crédito directo 5 años sin intereses</p>
+          <h3 class="text-xl font-bold">Lote 250 m² — CRÉDITO</h3>
           <ul class="mt-3 text-sm space-y-1">
-            <li>Precio especial: <strong>Bs 91.419,20</strong></li>
-            <li>Inicial: <strong>Bs 8.200</strong></li>
-            <li>Cuota mensual: <strong>Bs 1.390</strong></li>
-            <li class="text-brand-green font-semibold">¡Promo! Paga 3 cuotas, 1 de regalo</li>
-            <li>Precio al CONTADO: <strong>Bs 57.000</strong></li>
+            <li>Precio: <strong>Bs 78.412,50</strong></li>
+            <li>Inicial: <strong>Bs 7.000</strong> · Plazo: <strong>60 meses</strong></li>
+            <li>Cuota referencial: <strong>Bs 1.190/mes</strong></li>
+            <li class="text-brand-green font-semibold">Promo: Paga 3 cuotas, 1 gratis</li>
+          </ul>
+          <a target="_blank" href="https://wa.me/59169270000?text=Quiero%20el%20lote%20de%20250m2%20a%20cr%C3%A9dito" class="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-green text-white hover:opacity-95">Calcular mi plan</a>
+        </article>
+        <!-- 292 m2 crédito -->
+        <article class="bg-white border rounded-2xl p-6 shadow-soft">
+          <h3 class="text-xl font-bold">Lote 292 m² — CRÉDITO</h3>
+          <ul class="mt-3 text-sm space-y-1">
+            <li>Precio: <strong>Bs 91.419,20</strong></li>
+            <li>Inicial: <strong>Bs 8.200</strong> · Plazo: <strong>60 meses</strong></li>
+            <li>Cuota referencial: <strong>Bs 1.390/mes</strong></li>
+            <li class="text-brand-green font-semibold">Promo: Paga 3 cuotas, 1 gratis</li>
+            <li>Precio CONTADO: <strong>Bs 57.000</strong></li>
           </ul>
           <a target="_blank" href="https://wa.me/59169270000?text=Quiero%20el%20lote%20de%20292m2" class="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-green text-white hover:opacity-95">Cotizar por WhatsApp</a>
         </article>
       </div>
+
+      <!-- Comparativa -->
+      <div class="mt-10 overflow-x-auto">
+        <table class="min-w-full border rounded-2xl overflow-hidden">
+          <thead class="bg-slate-900 text-white">
+            <tr>
+              <th class="p-3 text-left">Plan</th>
+              <th class="p-3 text-left">Inicial</th>
+              <th class="p-3 text-left">Plazo</th>
+              <th class="p-3 text-left">Cuota</th>
+              <th class="p-3 text-left">Papeles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="p-3">250 m² Crédito</td>
+              <td class="p-3">Bs 7.000</td>
+              <td class="p-3">60 meses</td>
+              <td class="p-3">Bs 1.190</td>
+              <td class="p-3">Al día</td>
+            </tr>
+            <tr>
+              <td class="p-3">292 m² Crédito</td>
+              <td class="p-3">Bs 8.200</td>
+              <td class="p-3">60 meses</td>
+              <td class="p-3">Bs 1.390</td>
+              <td class="p-3">Al día</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section id="proceso" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Cómo comprar en 5 pasos</h2>
+      <div class="mt-8 grid md:grid-cols-5 gap-6">
+        <div class="bg-white border rounded-2xl p-6 shadow-soft"><h3 class="font-bold">1. Contacto</h3><p class="mt-2 text-slate-600">Nos escribes por WhatsApp y coordinamos visita.</p></div>
+        <div class="bg-white border rounded-2xl p-6 shadow-soft"><h3 class="font-bold">2. Visita</h3><p class="mt-2 text-slate-600">Vemos el lote, medidas y accesos.</p></div>
+        <div class="bg-white border rounded-2xl p-6 shadow-soft"><h3 class="font-bold">3. Reserva</h3><p class="mt-2 text-slate-600">Señal mínima y bloqueo de lote.</p></div>
+        <div class="bg-white border rounded-2xl p-6 shadow-soft"><h3 class="font-bold">4. Contrato</h3><p class="mt-2 text-slate-600">Firma de minuta con <strong>papeles al día</strong>.</p></div>
+        <div class="bg-white border rounded-2xl p-6 shadow-soft"><h3 class="font-bold">5. Entrega</h3><p class="mt-2 text-slate-600">Acta de entrega y acompañamiento para construir.</p></div>
+      </div>
+      <div class="mt-6"><a href="https://wa.me/59169270000?text=Quiero%20agendar%20mi%20visita" target="_blank" class="inline-flex items-center gap-2 bg-brand-green text-white px-5 py-3 rounded-xl shadow-soft hover:opacity-95">Agendar visita</a></div>
+    </div>
+  </section>
+
+  <!-- Documentos y garantías -->
+  <section id="docs" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Papeles al día y garantías</h2>
+      <p class="mt-2 text-slate-600">Transparencia total. Te mostramos la documentación de respaldo antes de firmar.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="border rounded-2xl p-6 shadow-soft bg-white"><h3 class="font-bold">Título de propiedad</h3><p class="mt-2 text-slate-600">Registro en Derechos Reales y catastro actualizado.</p><a href="#" class="mt-4 inline-block text-brand-green">Ver ejemplo (PDF)</a></div>
+        <div class="border rounded-2xl p-6 shadow-soft bg-white"><h3 class="font-bold">Planos y uso de suelo</h3><p class="mt-2 text-slate-600">Plano de loteo y compatibilidad urbanística.</p><a href="#" class="mt-4 inline-block text-brand-green">Ver ejemplo (PDF)</a></div>
+        <div class="border rounded-2xl p-6 shadow-soft bg-white"><h3 class="font-bold">Impuestos y autorizaciones</h3><p class="mt-2 text-slate-600">Últimos pagos municipales y autorización de publicidad.</p><a href="#" class="mt-4 inline-block text-brand-green">Ver ejemplo (PDF)</a></div>
+      </div>
+      <div class="mt-6 text-slate-600">¿Quieres revisar con tu abogado? <strong>Perfecto</strong>, te compartimos los documentos por correo o WhatsApp.</div>
     </div>
   </section>
 
   <!-- Ubicación -->
-  <section id="ubicacion" class="py-14">
+  <section id="ubicacion" class="py-16 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold">Ubicación</h2>
-      <p class="mt-2 text-slate-600">Desliza y explora el mapa. Reemplaza los marcadores por los enlaces exactos de Google Maps que usas en tus publicaciones.</p>
+      <h2 class="text-2xl md:text-3xl font-extrabold">Ubicación y puntos de interés</h2>
+      <p class="mt-2 text-slate-600">Reemplaza los iframes con tus enlaces exactos de Google Maps.</p>
       <div class="mt-6 grid md:grid-cols-2 gap-6">
         <iframe title="Mapa San Miguel 3" src="https://www.google.com/maps?q=Urbanizaci%C3%B3n+San+Miguel+3+Santa+Cruz+Bolivia&output=embed" class="w-full h-80 rounded-2xl border" loading="lazy"></iframe>
         <iframe title="Mapa San Miguel 4" src="https://www.google.com/maps?q=Urbanizaci%C3%B3n+San+Miguel+4+Santa+Cruz+Bolivia&output=embed" class="w-full h-80 rounded-2xl border" loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonios -->
-  <section id="testimonios" class="py-14 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold">Testimonios reales</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <figure class="bg-white border rounded-2xl p-6 shadow-soft">
-          <blockquote class="text-slate-700">“Excelente atención y resultados. Me entregaron toda la documentación y ahora ya estoy construyendo.”</blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— Familia Rojas</figcaption>
-        </figure>
-        <figure class="bg-white border rounded-2xl p-6 shadow-soft">
-          <blockquote class="text-slate-700">“Buena ubicación y cuotas claras. El proceso fue rápido y transparente.”</blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— Juan Carlos y Esposa</figcaption>
-        </figure>
-        <figure class="bg-white border rounded-2xl p-6 shadow-soft">
-          <blockquote class="text-slate-700">“Me gustó que todo estaba en regla. Nos ayudaron con trámites y planos.”</blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— Sra. Teresa</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Galería -->
-  <section id="galeria" class="py-14">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-end justify-between flex-wrap gap-4">
-        <h2 class="text-2xl md:text-3xl font-extrabold">Galería</h2>
-        <a target="_blank" href="https://www.instagram.com/bienesraicesmolinasrl" class="text-sm text-slate-600 hover:text-brand-green">Ver Instagram</a>
-      </div>
-      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="lote.jpg" alt="Lote marcado 250 m2" class="w-full h-40 object-cover rounded-xl border" loading="lazy" />
-        <img src="lote2.jpg" alt="Familia en su lote" class="w-full h-40 object-cover rounded-xl border" loading="lazy" />
-        <img src="lote3.jpg" alt="Avance de obras" class="w-full h-40 object-cover rounded-xl border" loading="lazy" />
-        <img src="lote4.jpg" alt="Ingreso a urbanización" class="w-full h-40 object-cover rounded-xl border" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="py-14 bg-slate-900 text-white">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="text-2xl md:text-3xl font-extrabold">Contáctanos</h2>
-          <p class="mt-2 text-slate-300">Escríbenos por WhatsApp y te asesoramos. También puedes enviarnos un correo a <a class="underline" href="mailto:foronda.pablo@gmail.com">foronda.pablo@gmail.com</a></p>
-          <ul class="mt-6 space-y-2 text-slate-300">
-            <li>📍 Santa Cruz de la Sierra — Zona Este</li>
-            <li>📞 +591 69270000</li>
-          </ul>
-          <div class="mt-6 flex gap-3">
-            <a id="ctaWhatsFooter" href="https://wa.me/59169270000?text=Hola%20Molina%20SRL" target="_blank" class="inline-flex items-center gap-2 bg-brand-green text-white px-5 py-3 rounded-xl shadow-soft hover:opacity-95">Hablar por WhatsApp</a>
-            <a href="https://www.instagram.com/bienesraicesmolinasrl" target="_blank" class="inline-flex items-center gap-2 border border-white/20 px-5 py-3 rounded-xl hover:bg-white hover:text-slate-900">Instagram</a>
-          </div>
-        </div>
-
-        <form id="whatsForm" class="bg-white text-slate-900 rounded-2xl p-6 shadow-soft">
-          <h3 class="text-xl font-bold">Quiero información</h3>
-          <p class="text-slate-600 text-sm">Completa y abriremos WhatsApp con tu mensaje listo.</p>
-          <div class="mt-4 grid grid-cols-1 gap-4">
-            <label class="block">
-              <span class="text-sm">Nombre y Apellido</span>
-              <input id="fNombre" type="text" required class="mt-1 w-full border rounded-xl px-3 py-2" placeholder="Tu nombre" />
-            </label>
-            <label class="block">
-              <span class="text-sm">Ciudad</span>
-              <input id="fCiudad" type="text" class="mt-1 w-full border rounded-xl px-3 py-2" placeholder="Santa Cruz" />
-            </label>
-            <label class="block">
-              <span class="text-sm">Correo</span>
-              <input id="fCorreo" type="email" class="mt-1 w-full border rounded-xl px-3 py-2" placeholder="tucorreo@ejemplo.com" />
-            </label>
-            <label class="block">
-              <span class="text-sm">Teléfono</span>
-              <input id="fTelefono" type="tel" class="mt-1 w-full border rounded-xl px-3 py-2" placeholder="7xxxxxxx" />
-            </label>
-            <label class="block">
-              <span class="text-sm">Proyecto</span>
-              <select id="fProyecto" class="mt-1 w-full border rounded-xl px-3 py-2">
-                <option>San Miguel 3</option>
-                <option>San Miguel 4</option>
-              </select>
-            </label>
-            <button type="submit" class="mt-2 bg-brand-green text-white px-4 py-3 rounded-xl hover:opacity-95">Enviar por WhatsApp</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-10 border-t">
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
-      <div>
-        <div class="flex items-center gap-3">
-          <img src="logomol.jpg" alt="Logo Molina SRL" class="w-9 h-9 object-contain" />
-          <span class="font-extrabold">MOLINA SRL</span>
-        </div>
-        <p class="mt-3 text-slate-600">Bienes Raíces y Servicios — confianza y seguridad jurídica para tu inversión.</p>
-      </div>
-      <div>
-        <h4 class="font-semibold">Explora</h4>
-        <ul class="mt-3 space-y-2 text-slate-600">
-          <li><a href="#proyectos" class="hover:text-brand-green">Proyectos</a></li>
-          <li><a href="#ofertas" class="hover:text-brand-green">Ofertas</a></li>
-          <li><a href="#ubicacion" class="hover:text-brand-green">Ubicación</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold">Contacto</h4>
-        <ul class="mt-3 space-y-2 text-slate-600">
-          <li><a href="mailto:foronda.pablo@gmail.com" class="hover:text-brand-green">foronda.pablo@gmail.com</a></li>
-          <li><a href="https://wa.me/
