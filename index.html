@@ -559,6 +559,46 @@
             <div class="mt-8 text-center"><a href="https://wa.me/59169270000?text=Quiero%20agendar%20mi%20visita" target="_blank" class="inline-flex items-center gap-2 bg-brand-green text-white px-5 py-3 rounded-xl shadow-soft hover:opacity-95">Agendar mi visita</a></div>
         </div>
     </section>
+    <!-- Sección de registro -->
+<section id="registro" class="py-16 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Regístrate para recibir información</h2>
+    <p class="mb-6 text-gray-600">
+      Completa este formulario y uno de nuestros asesores se pondrá en contacto para darte detalles sobre lotes y planes de financiamiento.
+    </p>
+
+    <form action="https://formspree.io/f/TU-CODIGO-AQUI" method="POST" class="grid gap-4 md:grid-cols-2">
+      <!-- Campo antispam oculto -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <!-- Campo de redirección al enviar -->
+      <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+
+      <label for="nombre" class="sr-only">Nombre completo</label>
+      <input id="nombre" type="text" name="nombre" placeholder="Nombre completo" required
+        class="border border-gray-300 rounded-lg p-3">
+
+      <label for="telefono" class="sr-only">Teléfono</label>
+      <input id="telefono" type="tel" name="telefono" placeholder="Teléfono" pattern="[0-9+ ]{6,}"
+        title="Solo números, mínimo 6 dígitos" required
+        class="border border-gray-300 rounded-lg p-3">
+
+      <label for="email" class="sr-only">Correo electrónico</label>
+      <input id="email" type="email" name="email" placeholder="Correo electrónico" required
+        class="border border-gray-300 rounded-lg p-3 md:col-span-2">
+
+      <label for="mensaje" class="sr-only">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Mensaje (opcional)" rows="3"
+        class="border border-gray-300 rounded-lg p-3 md:col-span-2"></textarea>
+
+      <button type="submit"
+        class="md:col-span-2 bg-brand-green text-white py-3 px-6 rounded-lg hover:opacity-90 transition">
+        Enviar solicitud
+      </button>
+    </form>
+  </div>
+</section>
+
     
     <footer id="contacto" class="bg-brand-gray text-white py-12">
         <div class="max-w-7xl mx-auto px-4">
